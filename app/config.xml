@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" width="1920" height="1080" id="http://yourdomain/WebVTTStylingTester" version="1.0.3" viewmodes="maximized">
+	<tizen:profile name="tv"/>
+	<tizen:content-security-policy>*</tizen:content-security-policy>
+	<tizen:metadata key="http://samsung.com/tv/metadata/devel.api.version" value="2.4"/>
+	<tizen:metadata key="http://samsung.com/tv/metadata/voice.support" value="false"/>
+	<tizen:metadata key="http://samsung.com/tv/metadata/multiscreen.support" value="true"/>
+	<tizen:metadata key="http://samsung.com/tv/metadata/multitasking.support" value="true"/> 
+	<tizen:privilege name="http://tizen.org/privilege/unlimitedstorage"/>
+	<tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+	<tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+	<tizen:privilege name="http://developer.samsung.com/privilege/network.public"/>
+	<tizen:privilege name="http://developer.samsung.com/privilege/productinfo"/>
+	<tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+	<tizen:privilege name="http://tizen.org/privilege/socket"/>
+	<tizen:privilege name="http://tizen.org/privilege/tv.audio"/>
+	<tizen:app-control>
+		<tizen:src name="index.html" reload="disable"></tizen:src>
+		<tizen:operation name="http://samsung.com/appcontrol/operation/eden_resume"></tizen:operation>
+	</tizen:app-control>
+	<tizen:application id="METqbFQfdP.WebVTTStylingTester" package="METqbFQfdP" required_version="2.3"/>
+	<author>You.i TV</author>
+	<description>A WebVTT style tester for Tizen TVs.</description>
+	<content src="index.html"/>
+	<feature name="http://tizen.org/feature/screen.size.all"/>
+	<icon src="icon.png"/>
+	<name>WebVTT Styling Tester</name>
+	<tizen:profile name="wearable"/>
+</widget>

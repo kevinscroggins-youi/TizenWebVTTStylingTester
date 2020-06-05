@@ -1,0 +1,66 @@
+#error-overlay {
+    background-color: black;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 400;
+    resize: vertical;
+}
+
+#error-overlay .text,
+#error-overlay .button {
+    font-family: sans-serif;
+}
+
+#error-overlay.visible {
+    display: table;
+}
+
+#error-overlay .content {
+    padding-top: 100px;
+}
+
+#error-overlay.fullscreen .content {
+    padding-top: 0px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#error-overlay .content .title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: red;
+    text-shadow: -1px  1px 2px white,
+                  1px  1px 2px white,
+                  1px -1px 0   white,
+                 -1px -1px 0   white;
+}
+
+#error-overlay .content .message {
+    margin: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#error-overlay .content .button.exit {
+    margin: 8px 4px;
+    padding: 18px 45px;
+    letter-spacing: 1.85px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    border: none;
+    color: white;
+    background-image: linear-gradient(to top right,#ec1c24,#d91c5c);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    pointer-events: auto;
+}

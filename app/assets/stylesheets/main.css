@@ -1,0 +1,57 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+body,
+.fa > * {
+	font-family: sans-serif;
+}
+
+body,
+button,
+input {
+	font-size: 1.4rem;
+}
+
+#logs_area {
+	display: none;
+}
+
+#logs_area.visible {
+	display: block;
+}
+
+#logs {
+	position: fixed;
+	width: 100%;
+	height: 80%;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+	resize: none;
+	z-index: 500;
+	font-size: 1.4rem;
+}
+
+#logs.debug {
+	height: 200px;
+}
+
+#logs.crash {
+	height: 600px;
+}
+
+.tizen #logs {
+	height: 920px;
+}
+
+#background_image {
+	position: absolute;
+	background-image: url("http://i.huffpost.com/gen/1565016/images/o-BLISS-facebook.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
