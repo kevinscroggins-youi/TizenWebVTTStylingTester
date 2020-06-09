@@ -162,47 +162,47 @@ CYIClosedCaptionsStyleManager.EdgeTypes = Object.freeze({
 CYIClosedCaptionsStyleManager.Fonts = Object.freeze({
     default: {
         displayName: "Default",
-        classSuffix: "font-default",
+        classSuffix: "default",
         value: "CAPTION_FONT_DEFAULT"
     },
     font0: {
         displayName: "Font 0",
-        classSuffix: "font-0",
+        classSuffix: "0",
         value: "CAPTION_FONT_STYLE0"
     },
     font1: {
         displayName: "Font 1",
-        classSuffix: "font-1",
+        classSuffix: "1",
         value: "CAPTION_FONT_STYLE1"
     },
     font2: {
         displayName: "Font 2",
-        classSuffix: "font-2",
+        classSuffix: "2",
         value: "CAPTION_FONT_STYLE2"
     },
     font3: {
         displayName: "Font 3",
-        classSuffix: "font-3",
+        classSuffix: "3",
         value: "CAPTION_FONT_STYLE3"
     },
     font4: {
         displayName: "Font 4",
-        classSuffix: "font-4",
+        classSuffix: "4",
         value: "CAPTION_FONT_STYLE4"
     },
     font5: {
         displayName: "Font 5",
-        classSuffix: "font-5",
+        classSuffix: "5",
         value: "CAPTION_FONT_STYLE5"
     },
     font6: {
         displayName: "Font 6",
-        classSuffix: "font-6",
+        classSuffix: "6",
         value: "CAPTION_FONT_STYLE6"
     },
     font7: {
         displayName: "Font 7",
-        classSuffix: "font-7",
+        classSuffix: "7",
         value: "CAPTION_FONT_STYLE7"
     }
 });

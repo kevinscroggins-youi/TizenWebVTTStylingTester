@@ -275,10 +275,6 @@
 .closed-captions-font-opacity-solid {
 }
 
-/*.closed-captions-font-opacity-flash {
-    animation-name: closed-captions-text-flash;
-}*/
-
 .flasher-on .closed-captions-font-opacity-flash {
 }
 
@@ -435,6 +431,81 @@
 .closed-captions-background-color-cyan,
 .closed-captions-window-color-cyan {
     background-color: rgba(0, 255, 255, 1);
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "Arial";
+    src: url("../fonts/Arial.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Courier";
+    src: url("../fonts/Courier.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TimesNewRoman";
+    src: url("../fonts/TimesNewRoman.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Swiss 721";
+    src: url("../fonts/Swiss721Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Impress";
+    src: url("../fonts/Impress.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Coronet";
+    src: url("../fonts/Coronet.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Engravers Gothic W01";
+    src: url("../fonts/Engravers_Gothic_W01_Bold.ttf") format("truetype");
+}
+
+.closed-captions-font-style-default,
+.closed-captions-font-style-0 {
+    font-family: "Arial";
+}
+
+.closed-captions-font-style-1 {
+    font-family: "Courier";
+}
+
+.closed-captions-font-style-2 {
+    font-family: "TimesNewRoman";
+}
+
+.closed-captions-font-style-3 {
+    font-family: "Helvetica";
+}
+
+.closed-captions-font-style-4 {
+    font-family: "Swiss 721";
+}
+
+.closed-captions-font-style-5 {
+    font-family: "Impress";
+}
+
+.closed-captions-font-style-6 {
+    font-family: "Coronet";
+}
+
+.closed-captions-font-style-7 {
+    font-family: "Engravers Gothic W01";
 }
 
 /* background / window opacities */
