@@ -44,11 +44,27 @@ CYIApplication.initialize = function initialize() {
 		backgroundImageElement.style.height = height + "px";
 
 		var closedCaptionsContainerElement = document.getElementById("closed_captions");
-		closedCaptionsContainerElement.firstChild.innerHTML = "<u>English subtitle 5 -Forced- (00:08:09.000)</u><br><i>Italics</i> - <b>BOLD</b> - <u>UNDERLINE</u>";
-
+		closedCaptionsContainerElement.classList.add("visible");
 		closedCaptionsContainerElement.style.left = x + "px";
 		closedCaptionsContainerElement.style.bottom = (screen.height - (y + height)) + "px";
 		closedCaptionsContainerElement.style.width = width + "px";
+
+		var captionIndex = 0;
+		var captions = [
+			"<u>English subtitle 4 -Unforced- (00:09:07.000)</u><br><u>UNDERLINE</u>",
+			"<u>English subtitle 5 -Forced- (00:08:09.000)</u><br><i>Italics</i> - <b>BOLD</b> - <u>UNDERLINE</u>",
+			"English subtitle 6 -Unforced- (00:09:11.000)<br>align start",
+			"English subtitle 10 -Forced- (00:09:19.000)",
+			"one<br>two<br>three<br>four<br>five"
+		];
+
+		setInterval(function() {
+			closedCaptionsContainerElement.firstChild.innerHTML = captions[captionIndex++];
+
+			if(captionIndex >= captions.length) {
+				captionIndex = 0;
+			}
+		}, 1000);
 	}, 0);
 };
 

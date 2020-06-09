@@ -11,6 +11,12 @@ CYIClosedCaptionsStyleManager.closedCaptionsContainerElement = null;
 
 CYIClosedCaptionsStyleManager.closedCaptionElement = null;
 
+CYIClosedCaptionsStyleManager.flasherOn = false;
+
+CYIClosedCaptionsStyleManager.flasherIntervalMs = 600;
+
+CYIClosedCaptionsStyleManager.flasherIntervalId = -1;
+
 CYIClosedCaptionsStyleManager.Colors = Object.freeze({
     default: {
         displayName: "Default",
@@ -411,6 +417,19 @@ CYIClosedCaptionsStyleManager.initialize = function initialize() {
     }
 
     CYIClosedCaptionsStyleManager.update();
+
+    CYIClosedCaptionsStyleManager.flasherIntervalId = setInterval(function() {
+        if(CYIClosedCaptionsStyleManager.flasherOn) {
+            closedCaptionsContainerElement.classList.remove("flasher-on");
+            closedCaptionsContainerElement.classList.add("flasher-off");
+        }
+        else {
+            closedCaptionsContainerElement.classList.add("flasher-on");
+            closedCaptionsContainerElement.classList.remove("flasher-off");
+        }
+
+        CYIClosedCaptionsStyleManager.flasherOn = !CYIClosedCaptionsStyleManager.flasherOn;
+    }, CYIClosedCaptionsStyleManager.flasherIntervalMs);
 };
 
 window.addEventListener("tizendependenciesloaded", function(event) {

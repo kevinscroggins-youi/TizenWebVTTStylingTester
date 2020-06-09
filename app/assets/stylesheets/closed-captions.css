@@ -1,14 +1,17 @@
 /* closed captions */
 
 #closed_captions {
+    visibility: hidden;
     position: absolute;
-    padding-top: 10px;
-    padding-bottom: 10px;
     z-index: 100;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#closed_captions.visible {
+    visibility: visible;
 }
 
 .closed-caption {
@@ -35,383 +38,6 @@
     font-size: 3rem;
 }
 
-/* font colors */
-
-.closed-captions-font-color-default,
-.closed-captions-font-color-white {
-    color: rgba(255, 255, 255, 1);
-}
-
-.closed-captions-font-color-black {
-    color: rgba(0, 0, 0, 1);
-}
-
-.closed-captions-font-color-red {
-    color: rgba(255, 0, 0, 1);
-}
-
-.closed-captions-font-color-green {
-    color: rgba(0, 255, 0, 1);
-}
-
-.closed-captions-font-color-blue {
-    color: rgba(0, 0, 255, 1);
-}
-
-.closed-captions-font-color-yellow {
-    color: rgba(255, 255, 0, 1);
-}
-
-.closed-captions-font-color-magenta {
-    color: rgba(255, 0, 255, 1);
-}
-
-.closed-captions-font-color-cyan {
-    color: rgba(0, 255, 255, 1);
-}
-
-/* font opacities */
-
-.closed-captions-font-opacity-solid {
-}
-
-.closed-captions-font-opacity-flash {
-    animation-name: closed-captions-text-flash;
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-default,
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-white {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-black {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-red {
-    color: rgba(255, 0, 0, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-green {
-    color: rgba(0, 255, 0, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-blue {
-    color: rgba(0, 0, 255, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-yellow {
-    color: rgba(255, 255, 0, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-magenta {
-    color: rgba(255, 0, 255, 0.5);
-}
-
-.closed-captions-font-opacity-transluscent.closed-captions-font-color-cyan {
-    color: rgba(0, 255, 255, 0.5);
-}
-
-.closed-captions-font-opacity-transparent {
-    /* not supported */
-}
-
-.closed-captions-font-opacity-default {
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-default,
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-white {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-black {
-    color: rgba(0, 0, 0, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-red {
-    color: rgba(255, 0, 0, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-green {
-    color: rgba(0, 255, 0, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-blue {
-    color: rgba(0, 0, 255, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-yellow {
-    color: rgba(255, 255, 0, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-magenta {
-    color: rgba(255, 0, 255, 0.75);
-}
-
-.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-cyan {
-    color: rgba(0, 255, 255, 0.75);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-default,
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-white {
-    color: rgba(255, 255, 255, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-black {
-    color: rgba(0, 0, 0, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-red {
-    color: rgba(255, 0, 0, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-green {
-    color: rgba(0, 255, 0, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-blue {
-    color: rgba(0, 0, 255, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-yellow {
-    color: rgba(255, 255, 0, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-magenta {
-    color: rgba(255, 0, 255, 0.25);
-}
-
-.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-cyan {
-    color: rgba(0, 255, 255, 0.25);
-}
-
-/* background colors */
-
-.closed-captions-background-color-white {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.closed-captions-background-color-default,
-.closed-captions-background-color-black {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.closed-captions-background-color-red {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.closed-captions-background-color-green {
-    background-color: rgba(0, 255, 0, 1);
-}
-
-.closed-captions-background-color-blue {
-    background-color: rgba(0, 0, 255, 1);
-}
-
-.closed-captions-background-color-yellow {
-    background-color: rgba(255, 255, 0, 1);
-}
-
-.closed-captions-background-color-magenta {
-    background-color: rgba(255, 0, 255, 1);
-}
-
-.closed-captions-background-color-cyan {
-    background-color: rgba(0, 255, 255, 1);
-}
-
-/* background / window colors */
-
-.closed-captions-background-color-white,
-.closed-captions-window-color-white {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.closed-captions-background-color-default,
-.closed-captions-background-color-black,
-.closed-captions-window-color-default,
-.closed-captions-window-color-black {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.closed-captions-background-color-red,
-.closed-captions-window-color-red {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.closed-captions-background-color-green,
-.closed-captions-window-color-green {
-    background-color: rgba(0, 255, 0, 1);
-}
-
-.closed-captions-background-color-blue,
-.closed-captions-window-color-blue {
-    background-color: rgba(0, 0, 255, 1);
-}
-
-.closed-captions-background-color-yellow,
-.closed-captions-window-color-yellow {
-    background-color: rgba(255, 255, 0, 1);
-}
-
-.closed-captions-background-color-magenta,
-.closed-captions-window-color-magenta {
-    background-color: rgba(255, 0, 255, 1);
-}
-
-.closed-captions-background-color-cyan,
-.closed-captions-window-color-cyan {
-    background-color: rgba(0, 255, 255, 1);
-}
-
-/* background / window opacities */
-
-.closed-captions-background-opacity-solid,
-.closed-captions-window-opacity-solid {
-}
-
-.closed-captions-background-opacity-flash,
-.closed-captions-window-opacity-flash {
-    animation-name: closed-captions-background-flash;
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-white,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-white {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-default,
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-black,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-default,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-black {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-red,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-red {
-    background-color: rgba(255, 0, 0, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-green,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-green {
-    background-color: rgba(0, 255, 0, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-blue,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-blue {
-    background-color: rgba(0, 0, 255, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-yellow,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-yellow {
-    background-color: rgba(255, 255, 0, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-magenta,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-magenta {
-    background-color: rgba(255, 0, 255, 0.5);
-}
-
-.closed-captions-background-opacity-transluscent.closed-captions-background-color-cyan,
-.closed-captions-window-opacity-transluscent.closed-captions-window-color-cyan {
-    background-color: rgba(0, 255, 255, 0.5);
-}
-
-.closed-captions-background-opacity-transparent,
-.closed-captions-window-opacity-transparent {
-    background-color: transparent;
-}
-
-.closed-captions-background-opacity-default {
-}
-
-.closed-captions-window-opacity-default.closed-captions-window-color-default {
-    background-color: transparent;
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-white,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-white {
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-default,
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-black,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-default,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-black {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-red,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-red {
-    background-color: rgba(255, 0, 0, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-green,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-green {
-    background-color: rgba(0, 255, 0, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-blue,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-blue  {
-    background-color: rgba(0, 0, 255, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-yellow,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-yellow {
-    background-color: rgba(255, 255, 0, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-magenta,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-magenta {
-    background-color: rgba(255, 0, 255, 0.75);
-}
-
-.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-cyan,
-.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-cyan {
-    background-color: rgba(0, 255, 255, 0.75);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-white,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-white {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-default,
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-black,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-default,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-black {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-red,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-red {
-    background-color: rgba(255, 0, 0, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-green,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-green {
-    background-color: rgba(0, 255, 0, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-blue,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-blue {
-    background-color: rgba(0, 0, 255, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-yellow,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-yellow {
-    background-color: rgba(255, 255, 0, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-magenta,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-magenta {
-    background-color: rgba(255, 0, 255, 0.25);
-}
-
-.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-cyan,
-.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-cyan {
-    background-color: rgba(0, 255, 255, 0.25);
-}
 
 /* edge colors */
 
@@ -609,35 +235,357 @@
     text-shadow: -1.5px -1.5px 1.75px cyan;
 }
 
-/* flashing animations */
+/* font colors */
 
-.closed-captions-font-opacity-flash,
-.closed-captions-background-opacity-flash,
-.closed-captions-window-opacity-flash {
-    animation-duration: 0.6s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
+.closed-captions-font-color-default,
+.closed-captions-font-color-white {
+    color: rgba(255, 255, 255, 1);
 }
 
-.closed-captions-font-opacity-flash.closed-captions-background-opacity-flash {
-    animation-name: closed-captions-text-flash, closed-captions-background-flash;
+.closed-captions-font-color-black {
+    color: rgba(0, 0, 0, 1);
 }
 
-@keyframes closed-captions-background-flash {
-    0%, 51% {
-        background-color: inherit;
-    }
-    1%, 50% {
-        background-color: transparent;
-    }
+.closed-captions-font-color-red {
+    color: rgba(255, 0, 0, 1);
 }
 
-@keyframes closed-captions-text-flash {
-    0%, 51% {
-        color: inherit;
-    }
-    1%, 50% {
-        color: transparent;
-        text-shadow: none;
-    }
+.closed-captions-font-color-green {
+    color: rgba(0, 255, 0, 1);
+}
+
+.closed-captions-font-color-blue {
+    color: rgba(0, 0, 255, 1);
+}
+
+.closed-captions-font-color-yellow {
+    color: rgba(255, 255, 0, 1);
+}
+
+.closed-captions-font-color-magenta {
+    color: rgba(255, 0, 255, 1);
+}
+
+.closed-captions-font-color-cyan {
+    color: rgba(0, 255, 255, 1);
+}
+
+/* font opacities */
+
+.closed-captions-font-opacity-solid {
+}
+
+/*.closed-captions-font-opacity-flash {
+    animation-name: closed-captions-text-flash;
+}*/
+
+.flasher-on .closed-captions-font-opacity-flash {
+}
+
+.flasher-off .closed-captions-font-opacity-flash {
+    color: transparent;
+    text-shadow: none;
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-default,
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-white {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-black {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-red {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-green {
+    color: rgba(0, 255, 0, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-blue {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-yellow {
+    color: rgba(255, 255, 0, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-magenta {
+    color: rgba(255, 0, 255, 0.5);
+}
+
+.closed-captions-font-opacity-transluscent.closed-captions-font-color-cyan {
+    color: rgba(0, 255, 255, 0.5);
+}
+
+.closed-captions-font-opacity-transparent {
+    /* not supported */
+}
+
+.closed-captions-font-opacity-default {
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-default,
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-white {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-black {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-red {
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-green {
+    color: rgba(0, 255, 0, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-blue {
+    color: rgba(0, 0, 255, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-yellow {
+    color: rgba(255, 255, 0, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-magenta {
+    color: rgba(255, 0, 255, 0.75);
+}
+
+.closed-captions-font-opacity-highly-transluscent.closed-captions-font-color-cyan {
+    color: rgba(0, 255, 255, 0.75);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-default,
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-white {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-black {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-red {
+    color: rgba(255, 0, 0, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-green {
+    color: rgba(0, 255, 0, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-blue {
+    color: rgba(0, 0, 255, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-yellow {
+    color: rgba(255, 255, 0, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-magenta {
+    color: rgba(255, 0, 255, 0.25);
+}
+
+.closed-captions-font-opacity-slightly-transluscent.closed-captions-font-color-cyan {
+    color: rgba(0, 255, 255, 0.25);
+}
+
+/* background / window colors */
+
+.closed-captions-background-color-white,
+.closed-captions-window-color-white {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.closed-captions-background-color-default,
+.closed-captions-background-color-black,
+.closed-captions-window-color-default,
+.closed-captions-window-color-black {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.closed-captions-background-color-red,
+.closed-captions-window-color-red {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.closed-captions-background-color-green,
+.closed-captions-window-color-green {
+    background-color: rgba(0, 255, 0, 1);
+}
+
+.closed-captions-background-color-blue,
+.closed-captions-window-color-blue {
+    background-color: rgba(0, 0, 255, 1);
+}
+
+.closed-captions-background-color-yellow,
+.closed-captions-window-color-yellow {
+    background-color: rgba(255, 255, 0, 1);
+}
+
+.closed-captions-background-color-magenta,
+.closed-captions-window-color-magenta {
+    background-color: rgba(255, 0, 255, 1);
+}
+
+.closed-captions-background-color-cyan,
+.closed-captions-window-color-cyan {
+    background-color: rgba(0, 255, 255, 1);
+}
+
+/* background / window opacities */
+
+.closed-captions-background-opacity-solid,
+.closed-captions-window-opacity-solid {
+}
+
+.flasher-on .closed-captions-background-opacity-flash,
+.closed-captions-window-opacity-flash.flasher-on {
+}
+
+.flasher-off .closed-captions-background-opacity-flash,
+.closed-captions-window-opacity-flash.flasher-off {
+    background-color: transparent
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-white,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-white {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-default,
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-black,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-default,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-black {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-red,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-red {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-green,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-green {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-blue,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-blue {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-yellow,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-yellow {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-magenta,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-magenta {
+    background-color: rgba(255, 0, 255, 0.5);
+}
+
+.closed-captions-background-opacity-transluscent.closed-captions-background-color-cyan,
+.closed-captions-window-opacity-transluscent.closed-captions-window-color-cyan {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+.closed-captions-background-opacity-transparent,
+.closed-captions-window-opacity-transparent {
+    background-color: transparent;
+}
+
+.closed-captions-background-opacity-default {
+}
+
+.closed-captions-window-opacity-default.closed-captions-window-color-default {
+    background-color: transparent;
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-white,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-white {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-default,
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-black,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-default,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-black {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-red,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-red {
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-green,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-green {
+    background-color: rgba(0, 255, 0, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-blue,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-blue  {
+    background-color: rgba(0, 0, 255, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-yellow,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-yellow {
+    background-color: rgba(255, 255, 0, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-magenta,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-magenta {
+    background-color: rgba(255, 0, 255, 0.75);
+}
+
+.closed-captions-background-opacity-highly-transluscent.closed-captions-background-color-cyan,
+.closed-captions-window-opacity-highly-transluscent.closed-captions-window-color-cyan {
+    background-color: rgba(0, 255, 255, 0.75);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-white,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-white {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-default,
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-black,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-default,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-black {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-red,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-red {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-green,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-green {
+    background-color: rgba(0, 255, 0, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-blue,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-blue {
+    background-color: rgba(0, 0, 255, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-yellow,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-yellow {
+    background-color: rgba(255, 255, 0, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-magenta,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-magenta {
+    background-color: rgba(255, 0, 255, 0.25);
+}
+
+.closed-captions-background-opacity-slightly-transluscent.closed-captions-background-color-cyan,
+.closed-captions-window-opacity-slightly-transluscent.closed-captions-window-color-cyan {
+    background-color: rgba(0, 255, 255, 0.25);
 }
